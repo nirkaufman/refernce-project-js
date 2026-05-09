@@ -1,0 +1,329 @@
+{
+  "recipes": [
+    {
+      "name": "Classic Cheese Omelette",
+      "whyThisWorks": "A timeless breakfast that showcases the simplicity of eggs and cheese coming together in perfect harmony.",
+      "additionalIngredients": [],
+      "prepTime": "5 min",
+      "cookTime": "5 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Crack 3 eggs into a bowl and whisk vigorously for 30 seconds until slightly frothy.",
+        "Heat a non-stick pan over medium-low heat and add 1 tablespoon of butter, swirling to coat.",
+        "Pour in the eggs and let them sit for 20-30 seconds until the edges begin to set.",
+        "Using a spatula, gently push the edges toward the center while tilting the pan to let uncooked egg flow to the edges.",
+        "When the top is still slightly wet but not runny (about 2 minutes), add shredded cheese to one half.",
+        "Fold the omelette in half and slide onto a plate. Let rest 30 seconds for residual heat to finish cooking."
+      ],
+      "chefTips": [
+        "Low and slow is the secret - high heat makes rubbery eggs.",
+        "Remove from heat while still slightly wet on top; carryover cooking will finish it perfectly."
+      ],
+      "variations": [
+        "Add fresh herbs like chives or parsley for a garden-fresh twist.",
+        "Try different cheeses: gruyère for nuttiness, goat cheese for tang."
+      ]
+    },
+    {
+      "name": "Garlic Butter Pasta",
+      "whyThisWorks": "Simple ingredients create maximum flavor when garlic is gently toasted in butter and tossed with al dente pasta.",
+      "additionalIngredients": [
+        "parmesan cheese"
+      ],
+      "prepTime": "5 min",
+      "cookTime": "15 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Bring a large pot of salted water to a rolling boil and cook pasta according to package directions, reserving 1 cup pasta water before draining.",
+        "While pasta cooks, melt 4 tablespoons butter in a large skillet over medium-low heat.",
+        "Add 4-5 minced garlic cloves and cook gently for 2-3 minutes until fragrant and just golden - watch carefully to avoid burning.",
+        "Add drained pasta to the skillet along with 1/2 cup reserved pasta water.",
+        "Toss vigorously for 1-2 minutes, allowing the starchy water to emulsify with the butter into a silky sauce.",
+        "Remove from heat, add grated parmesan, and toss again. Season with salt and fresh cracked pepper."
+      ],
+      "chefTips": [
+        "Toast garlic low and slow - burnt garlic is bitter and will ruin the dish.",
+        "Pasta water is liquid gold; the starch helps the sauce cling to every strand."
+      ],
+      "variations": [
+        "Add a pinch of red pepper flakes for gentle heat.",
+        "Finish with a squeeze of lemon for brightness."
+      ]
+    },
+    {
+      "name": "Tomato Basil Bruschetta",
+      "whyThisWorks": "Peak summer flavors meet crispy bread - the contrast of cool tomatoes on warm toast is irresistible.",
+      "additionalIngredients": [
+        "balsamic vinegar"
+      ],
+      "prepTime": "15 min",
+      "cookTime": "5 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Dice 4-5 ripe tomatoes and place in a bowl. Season generously with salt and let sit 10 minutes to draw out juices.",
+        "Slice a baguette into 1/2-inch rounds and brush both sides with olive oil.",
+        "Toast bread under a broiler or on a grill pan for 1-2 minutes per side until golden and crispy.",
+        "Rub each warm toast with a cut garlic clove - the rough surface will grate the garlic right in.",
+        "Drain excess liquid from tomatoes, then toss with torn fresh basil, a drizzle of olive oil, and a splash of balsamic.",
+        "Spoon tomato mixture generously onto each toast and serve immediately."
+      ],
+      "chefTips": [
+        "Salting tomatoes ahead of time concentrates their flavor beautifully.",
+        "Make the topping and toast separately, assemble just before serving to keep bread crispy."
+      ],
+      "variations": [
+        "Add small mozzarella balls for a caprese-style version.",
+        "Top with a drizzle of honey for sweet-savory contrast."
+      ]
+    },
+    {
+      "name": "Chicken Stir Fry",
+      "whyThisWorks": "High heat and quick cooking keep vegetables crisp and chicken juicy in this versatile one-pan meal.",
+      "additionalIngredients": [
+        "soy sauce",
+        "sesame oil"
+      ],
+      "prepTime": "15 min",
+      "cookTime": "10 min",
+      "difficulty": "Medium",
+      "instructions": [
+        "Slice 1 lb chicken breast into thin strips and season with salt. Let sit at room temperature while you prep vegetables.",
+        "Cut vegetables into similar-sized pieces: bell peppers in strips, broccoli in small florets, carrots in thin coins.",
+        "Heat a wok or large skillet over high heat until smoking. Add 2 tablespoons oil and swirl to coat.",
+        "Add chicken in a single layer - don't stir for 1 minute to get good browning. Then stir-fry 3-4 minutes until cooked through. Remove to a plate.",
+        "Add more oil if needed, then add vegetables starting with the hardest (carrots) first. Stir-fry 3-4 minutes until crisp-tender.",
+        "Return chicken to pan, add 3 tablespoons soy sauce and 1 teaspoon sesame oil. Toss 30 seconds until everything is coated and glossy."
+      ],
+      "chefTips": [
+        "Don't overcrowd the pan - cook in batches if needed for proper browning.",
+        "Have everything prepped before you start; stir-fry moves fast!"
+      ],
+      "variations": [
+        "Swap chicken for shrimp or tofu for different protein options.",
+        "Add a tablespoon of oyster sauce for deeper umami flavor."
+      ]
+    },
+    {
+      "name": "Greek Salad",
+      "whyThisWorks": "Crisp vegetables, briny olives, and creamy feta create a refreshing Mediterranean classic that needs no cooking.",
+      "additionalIngredients": [
+        "kalamata olives",
+        "red onion",
+        "dried oregano"
+      ],
+      "prepTime": "15 min",
+      "cookTime": "0 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Cut 2 large cucumbers into half-moons and 4 ripe tomatoes into wedges. Place in a large bowl.",
+        "Thinly slice half a red onion into rings and add to the bowl.",
+        "Add 1/2 cup kalamata olives and season everything with salt, pepper, and 1 teaspoon dried oregano.",
+        "Drizzle generously with extra virgin olive oil (about 1/4 cup) and 2 tablespoons red wine vinegar.",
+        "Toss gently to combine, then transfer to a serving platter.",
+        "Top with a large block of feta cheese (about 4 oz) and drizzle with a little more olive oil."
+      ],
+      "chefTips": [
+        "Use the best olive oil you have - it's a main flavor component here.",
+        "Don't crumble the feta; a whole block looks beautiful and lets people break off their own pieces."
+      ],
+      "variations": [
+        "Add capers for extra briny punch.",
+        "Include chunks of crusty bread to make it a panzanella-style meal."
+      ]
+    },
+    {
+      "name": "Mushroom Risotto",
+      "whyThisWorks": "Patient stirring and quality stock transform humble rice and mushrooms into a luxuriously creamy dish.",
+      "additionalIngredients": [
+        "arborio rice",
+        "white wine",
+        "vegetable or chicken stock",
+        "parmesan cheese"
+      ],
+      "prepTime": "10 min",
+      "cookTime": "30 min",
+      "difficulty": "Medium",
+      "instructions": [
+        "Warm 6 cups stock in a saucepan and keep at a gentle simmer throughout cooking.",
+        "In a large pan, sauté 8 oz sliced mushrooms in butter until golden brown, about 5-6 minutes. Season and set aside.",
+        "In the same pan, sauté diced onion in butter until soft, about 3 minutes. Add 1.5 cups arborio rice and toast for 1-2 minutes until edges look translucent.",
+        "Add 1/2 cup white wine and stir until absorbed. Begin adding warm stock one ladle at a time, stirring frequently.",
+        "Continue adding stock and stirring for 18-20 minutes until rice is creamy but still has a slight bite (al dente).",
+        "Remove from heat, fold in mushrooms, 1/2 cup parmesan, and 2 tablespoons butter. Cover for 2 minutes, then serve immediately."
+      ],
+      "chefTips": [
+        "Never stop stirring for long - constant agitation releases the rice's starch for creaminess.",
+        "The risotto should flow like lava when plated; add more stock if it's too thick."
+      ],
+      "variations": [
+        "Add a handful of dried porcini soaked in warm water for intense mushroom flavor.",
+        "Finish with truffle oil for an elegant touch."
+      ]
+    },
+    {
+      "name": "Honey Glazed Salmon",
+      "whyThisWorks": "Sweet honey caramelizes beautifully against rich salmon, creating an irresistible sweet-savory crust.",
+      "additionalIngredients": [
+        "soy sauce",
+        "rice vinegar"
+      ],
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Pat 4 salmon fillets dry and season generously with salt and pepper. Let sit at room temperature for 10 minutes.",
+        "Whisk together 3 tablespoons honey, 2 tablespoons soy sauce, 1 tablespoon rice vinegar, and 2 minced garlic cloves.",
+        "Heat an oven-safe skillet over medium-high heat with 1 tablespoon oil.",
+        "Sear salmon skin-side up for 3 minutes until a golden crust forms. Flip carefully.",
+        "Pour honey glaze over the salmon and transfer skillet to a 400°F oven for 6-8 minutes until salmon flakes easily.",
+        "Spoon pan sauce over salmon and garnish with sesame seeds or green onions."
+      ],
+      "chefTips": [
+        "Don't move the salmon while searing - let it develop that caramelized crust undisturbed.",
+        "Salmon is done when it reaches 125°F internal temperature for medium; it will carry over to 130°F while resting."
+      ],
+      "variations": [
+        "Add a teaspoon of grated ginger to the glaze for warmth.",
+        "Substitute maple syrup for honey for a different sweetness profile."
+      ]
+    },
+    {
+      "name": "Vegetable Curry",
+      "whyThisWorks": "Aromatic spices and creamy coconut milk transform everyday vegetables into a warming, satisfying dish.",
+      "additionalIngredients": [
+        "coconut milk",
+        "curry powder",
+        "ginger"
+      ],
+      "prepTime": "15 min",
+      "cookTime": "25 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Cut mixed vegetables (potatoes, carrots, cauliflower, bell peppers) into bite-sized pieces - about 4 cups total.",
+        "Heat 2 tablespoons oil in a large pot over medium heat. Add diced onion and cook 4-5 minutes until softened.",
+        "Add 2 tablespoons curry powder, 1 tablespoon minced ginger, and 3 minced garlic cloves. Stir for 1 minute until fragrant.",
+        "Add vegetables and stir to coat with spices. Pour in 1 can coconut milk and 1/2 cup water.",
+        "Bring to a simmer, cover, and cook 15-20 minutes until vegetables are tender, stirring occasionally.",
+        "Season with salt and a squeeze of lime juice. Serve over steamed rice with fresh cilantro."
+      ],
+      "chefTips": [
+        "Toast the curry powder in oil to bloom the spices and deepen their flavor.",
+        "Add harder vegetables first (potatoes, carrots) and softer ones later if you want varied textures."
+      ],
+      "variations": [
+        "Add chickpeas or tofu for extra protein.",
+        "Stir in spinach at the end for added nutrition."
+      ]
+    },
+    {
+      "name": "Beef Tacos",
+      "whyThisWorks": "Seasoned ground beef in warm tortillas with fresh toppings creates the perfect balance of savory, tangy, and fresh.",
+      "additionalIngredients": [
+        "taco seasoning or cumin/chili powder",
+        "lime",
+        "sour cream"
+      ],
+      "prepTime": "10 min",
+      "cookTime": "15 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Heat a large skillet over medium-high heat. Add 1 lb ground beef and break apart with a wooden spoon.",
+        "Cook 5-6 minutes until browned, then drain excess fat.",
+        "Add 2 tablespoons taco seasoning (or 1 tsp each cumin and chili powder) and 1/4 cup water. Simmer 3-4 minutes until thickened.",
+        "Warm tortillas in a dry skillet for 30 seconds per side or wrap in foil and heat in oven.",
+        "Prep toppings: shred lettuce, dice tomatoes, slice onions, grate cheese, and chop cilantro.",
+        "Serve beef in warm tortillas topped with your choice of toppings, sour cream, and a squeeze of fresh lime."
+      ],
+      "chefTips": [
+        "Don't skip draining the fat - it prevents greasy tacos.",
+        "Double the tortillas for each taco to prevent breaking with all the toppings."
+      ],
+      "variations": [
+        "Use ground turkey or chicken for a lighter option.",
+        "Make it a taco salad by serving over crispy tortilla chips and lettuce."
+      ]
+    },
+    {
+      "name": "Lemon Herb Chicken",
+      "whyThisWorks": "Bright citrus and aromatic herbs elevate simple chicken breast into a restaurant-worthy main course.",
+      "additionalIngredients": [
+        "fresh herbs (thyme, rosemary)",
+        "chicken broth"
+      ],
+      "prepTime": "10 min",
+      "cookTime": "20 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Pound 2 chicken breasts to even 1/2-inch thickness for even cooking. Season generously with salt and pepper.",
+        "Zest one lemon and juice it. Mix zest with 2 tablespoons olive oil, minced garlic, and chopped fresh herbs.",
+        "Heat an oven-safe skillet over medium-high heat with 1 tablespoon oil. Sear chicken 4 minutes until golden.",
+        "Flip chicken, add 1/2 cup chicken broth and the lemon juice to the pan.",
+        "Transfer to a 400°F oven and bake 10-12 minutes until internal temperature reaches 165°F.",
+        "Remove chicken to rest. Return skillet to stovetop, add herb-lemon oil, and simmer 2 minutes to make a pan sauce. Drizzle over chicken."
+      ],
+      "chefTips": [
+        "Pounding chicken ensures even cooking - no more dry edges and raw centers.",
+        "Let chicken rest 5 minutes before slicing to keep juices inside."
+      ],
+      "variations": [
+        "Add capers and olives to the pan sauce for a Mediterranean twist.",
+        "Substitute orange for lemon for a sweeter citrus profile."
+      ]
+    },
+    {
+      "name": "Cheesy Stovetop Bread Omelet",
+      "whyThisWorks": "It turns three simple ingredients—eggs, cheese, and bread—into a satisfying, melty, golden omelet-sandwich hybrid using just one pan.",
+      "additionalIngredients": [],
+      "prepTime": "5 min",
+      "cookTime": "8 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Crack 2–3 eggs into a bowl, season with a pinch of salt and pepper, and beat with a fork until smooth.",
+        "Heat a nonstick or well‑oiled pan over medium heat and add a small knob of butter or a drizzle of oil.",
+        "Pour the beaten eggs into the pan and tilt to spread them out evenly; cook 30–60 seconds until the edges just begin to set but the top is still a little runny.",
+        "Place 1–2 slices of bread directly on top of the soft eggs, pressing lightly so they stick, and sprinkle a generous layer of grated or sliced cheese over the exposed egg around the bread.",
+        "Cook another 1–2 minutes until the bottom of the eggs are lightly golden and mostly set, then carefully flip everything in one piece so the bread is now touching the pan.",
+        "Cook 2–3 minutes more, pressing gently, until the bread is toasted and the cheese is melted and gooey.",
+        "Fold any overhanging egg up over the bread like a blanket, then fold the whole thing in half like a sandwich; cook 30–60 seconds per side more if you like it extra toasty.",
+        "Slide onto a plate, cut in half if you like, and enjoy hot."
+      ],
+      "chefTips": [
+        "If flipping the whole omelet feels tricky, cut it in half in the pan first and flip one half at a time.",
+        "Use lower heat if the bread is browning too fast before the cheese melts; this gives the cheese time to get nice and gooey."
+      ],
+      "variations": [
+        "Add thin tomato slices, herbs, or leftover cooked vegetables on top of the cheese before flipping for extra flavor.",
+        "Spread the bread with a little mustard, mayonnaise, or hot sauce before adding it to the pan for a flavor boost."
+      ]
+    },
+    {
+      "name": "Refreshing Mango Cucumber Chili-Lime Salad",
+      "whyThisWorks": "The sweetness of ripe mango, the cool crunch of cucumber, and a bright chili-lime dressing create a quick, vibrant salad that’s incredibly refreshing and needs very few extra ingredients.",
+      "additionalIngredients": [
+        "lime or lemon",
+        "fresh chili or chili flakes",
+        "fresh herbs (mint or cilantro) - optional"
+      ],
+      "prepTime": "10 min",
+      "cookTime": "0 min",
+      "difficulty": "Easy",
+      "instructions": [
+        "Peel the mango and cut the flesh into small cubes or thin slices, catching any juices in the bowl.",
+        "Wash the cucumber. If the skin is thick or waxy, peel it; otherwise you can leave the peel on for extra crunch. Slice into half-moons or small cubes.",
+        "In a small bowl, mix together 1–2 tablespoons lime or lemon juice, a pinch of salt, a small pinch of sugar (optional, if your mango isn’t very sweet), and a pinch of chili flakes or very finely chopped fresh chili.",
+        "Taste the dressing and adjust: more lime for brightness, more salt to make the flavors pop, more chili for heat.",
+        "Pour the dressing over the mango and cucumber and toss gently to coat everything without crushing the fruit.",
+        "If you have them, tear a few mint or cilantro leaves and scatter over the top just before serving.",
+        "Serve immediately for maximum crunch, or chill for 10–15 minutes to let the flavors mingle."
+      ],
+      "chefTips": [
+        "If your cucumber is very seedy or watery, scoop out the seeds with a spoon before slicing so the salad doesn’t get diluted.",
+        "Very firm, just-ripe mango works best here; if it’s extremely soft, cut larger pieces so they don’t turn to mush when tossing."
+      ],
+      "variations": [
+        "Add a handful of roasted peanuts or cashews for crunch and protein, plus a drizzle of soy sauce for a more savory twist.",
+        "Thinly slice some red onion and add it to the salad for a sharper, more complex flavor."
+      ]
+    }
+  ]
+}

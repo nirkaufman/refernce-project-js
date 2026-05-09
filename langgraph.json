@@ -1,0 +1,14 @@
+{
+  "node_version": "20",
+  "graphs": {
+    "prompt": "./src/modules/module_1/1.2_prompts/1.2.1_prompt.ts:prompt",
+    "structure": "./src/modules/module_1/1.3_structure.ts:structure",
+    "tools": "./src/modules/module_1/1.4_tools/tools.ts:simpleToolsAgent",
+    "describeImage": "./src/modules/module_1/1.6_multimodal/describe-image.ts:describeImage",
+    "recipeSearchTools": "./src/modules/module_1/1.4_tools/simple-search.ts:recipeSearchTools",
+    "leftoverMaelAgent": "./src/projects/leftover-meal-agent/leftover-meal-agent.ts:leftoverMealAgent"
+  },
+  "env": ".env",
+  "dependencies": ["."],
+  "image_distro": "wolfi"
+}
