@@ -118,10 +118,11 @@ async function router(state: typeof RouterState.State): Promise<Send[]> {
   ]);
 
   const validDomains = result.domains.filter((d) => d in AGENTS);
+  const domainsToQuery = validDomains.length > 0 ? validDomains : Object.keys(AGENTS);
 
   // Send dispatches each agent as an independent parallel branch.
   // Each branch receives its own copy of the state slice it needs.
-  return validDomains.map((domain) => new Send(`${domain}_agent`, { query: state.query, answers: [] }));
+  return domainsToQuery.map((domain) => new Send(`${domain}_agent`, { query: state.query, answers: [] }));
 }
 
 // ---------------------------------------------------------------------------
@@ -170,7 +171,7 @@ async function synthesize(state: typeof RouterState.State) {
 // ---------------------------------------------------------------------------
 
 const graph = new StateGraph(RouterState)
-  .addNode("router", router)
+  .addNode("router", router, { ends: ["docs_agent", "changelog_agent", "community_agent"] })
   .addNode("docs_agent", docsNode)
   .addNode("changelog_agent", changelogNode)
   .addNode("community_agent", communityNode)
@@ -185,8 +186,8 @@ export const parallelRouter = graph.compile();
 
 
 // --- Example usage ---
-const result = await parallelRouter.invoke({
-  query: "What changed in the latest release and are there known migration issues?",
-  answers: [],
-});
-console.log(result.finalAnswer);
+// const result = await parallelRouter.invoke({
+//   query: "What changed in the latest release and are there known migration issues?",
+//   answers: [],
+// });
+// console.log(result.finalAnswer);
