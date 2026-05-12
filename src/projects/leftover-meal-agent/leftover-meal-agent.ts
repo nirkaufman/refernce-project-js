@@ -1,10 +1,8 @@
-// import * as fs from 'fs';
-// import * as path from 'path';
 import { createAgent } from "langchain";
 import { ChatOpenAI } from "@langchain/openai";
-// import { MemorySaver } from "@langchain/langgraph";
 import { TavilySearch } from "@langchain/tavily";
-// import { HumanMessage } from "@langchain/core/messages";
+// import { MemorySaver } from "@langchain/langgraph";
+
 
 // Initialize TavilySearch tool for web search
 const webSearch = new TavilySearch({
@@ -44,31 +42,3 @@ export const leftoverMealAgent = createAgent({
   systemPrompt,
   tools: [webSearch],
 });
-
-// Demo invocation - only runs when executed directly via CLI
-// Run with: npx tsx src/4-leftover-meal-agent/leftover-meal-agent.ts
-// if (process.argv[1]?.includes('leftover-meal-agent')) {
-//   const imagePath = path.join(import.meta.dirname, 'assets', 'ingredients.jpg');
-//   const imageData = fs.readFileSync(imagePath);
-//   const base64Image = imageData.toString('base64');
-//
-//   const message = new HumanMessage({
-//     content: [
-//       { type: "text", text: "Here's what I have in my fridge. What can I make?" },
-//       {
-//         type: "image_url",
-//         image_url: {
-//           url: `data:image/jpeg;base64,${base64Image}`,
-//         },
-//       },
-//     ],
-//   });
-//
-//   const response = await agent.invoke(
-//     { messages: [message] },
-//     { configurable: { thread_id: "leftover-demo-1" } }
-//   );
-//
-//   const lastMessage = response.messages[response.messages.length - 1];
-//   console.log("Chef:", lastMessage.content);
-// }

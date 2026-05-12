@@ -30,7 +30,8 @@
     "skillsAgent": "./src/modules/module_3/3.3_multi_agent/3.3.3_skills/3.3.3_skills.ts:skillsAgent",
     "singleRouter": "./src/modules/module_3/3.3_multi_agent/3.3.4_router/3.3.4.1_single_agent.ts:singleRouter",
     "parallelRouter": "./src/modules/module_3/3.3_multi_agent/3.3.4_router/3.3.4.2_parallel_agents.ts:parallelRouter",
-    "salesLeadAgent": "./src/modules/module_3/3.4_prompt_engineering/3.4.3_prompt_pull.ts:salesLeadAgent"
+    "salesLeadAgent": "./src/modules/module_3/3.4_prompt_engineering/3.4.3_prompt_pull.ts:salesLeadAgent",
+    "leftoverMealAgent": "./src/projects/leftover-meal-agent/leftover-meal-agent.ts:leftoverMealAgent"
   },
   "env": ".env",
   "dependencies": ["."],
