@@ -88,12 +88,12 @@ const loadSkill = tool(
     name: "load_skill",
     description: `Load a specialized skill prompt on-demand.
 
-Available skills:
-- write_sql   : Expert SQL query author
-- review_code : Expert code reviewer (bugs, security, performance)
-- write_tests : Expert test author (pytest / vitest)
-
-Returns the skill's full prompt and domain guidelines.`,
+    Available skills:
+    - write_sql   : Expert SQL query author
+    - review_code : Expert code reviewer (bugs, security, performance)
+    - write_tests : Expert test author (pytest / vitest)
+    
+    Returns the skill's full prompt and domain guidelines.`,
     schema: z.object({ skillName: z.string().describe("Name of the skill to load") }),
   }
 );

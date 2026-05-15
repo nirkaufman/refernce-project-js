@@ -21,9 +21,9 @@
  */
 
 import { createAgent, initChatModel } from "langchain";
-import { HumanMessage } from "@langchain/core/messages";
-import { Command, END, MessagesAnnotation, START, StateGraph } from "@langchain/langgraph";
+import { Annotation, Command, END, MessagesAnnotation, START, StateGraph } from "@langchain/langgraph";
 import z from "zod";
+import {HumanMessage} from "@langchain/core/messages";
 
 const model = await initChatModel("gpt-4o");
 
@@ -31,6 +31,10 @@ const model = await initChatModel("gpt-4o");
 // Classification schema — structured output forces a valid routing decision.
 // The router model must return exactly one of the three domain values.
 // ---------------------------------------------------------------------------
+
+const RouterState = Annotation.Root({
+  ...MessagesAnnotation.spec,
+});
 
 const ClassificationSchema = z.object({
   domain: z.enum(["billing", "technical", "general"]),
@@ -70,7 +74,7 @@ const generalAgent = createAgent({
 
 const classifier = model.withStructuredOutput(ClassificationSchema);
 
-async function router(state: typeof MessagesAnnotation.State) {
+async function router(state: typeof RouterState.State) {
   const result = await classifier.invoke([
     {
       role: "system",
@@ -90,9 +94,9 @@ async function router(state: typeof MessagesAnnotation.State) {
 // Agent node wrappers — invoke the agent and return its messages to the graph
 // ---------------------------------------------------------------------------
 
-const runBillingAgent = (state: typeof MessagesAnnotation.State) => billingAgent.invoke(state);
-const runTechnicalAgent = (state: typeof MessagesAnnotation.State) => technicalAgent.invoke(state);
-const runGeneralAgent = (state: typeof MessagesAnnotation.State) => generalAgent.invoke(state);
+const runBillingAgent = (state: typeof RouterState.State) => billingAgent.invoke(state);
+const runTechnicalAgent = (state: typeof RouterState.State) => technicalAgent.invoke(state);
+const runGeneralAgent = (state: typeof RouterState.State) => generalAgent.invoke(state);
 
 // ---------------------------------------------------------------------------
 // Graph — router is the single entry point; agents are the leaf nodes.
@@ -100,7 +104,7 @@ const runGeneralAgent = (state: typeof MessagesAnnotation.State) => generalAgent
 // to agents — LangGraph resolves the destination dynamically at runtime.
 // ---------------------------------------------------------------------------
 
-const graph = new StateGraph(MessagesAnnotation)
+const graph = new StateGraph(RouterState)
   .addNode("router", router, { ends: ["billing_agent", "technical_agent", "general_agent"] })
   .addNode("billing_agent", runBillingAgent)
   .addNode("technical_agent", runTechnicalAgent)
@@ -117,4 +121,5 @@ export const singleRouter = graph.compile();
 const result = await singleRouter.invoke({
   messages: [new HumanMessage("My invoice from last month looks wrong, I was charged twice.")],
 });
+
 console.log(result.messages.at(-1)?.content);
