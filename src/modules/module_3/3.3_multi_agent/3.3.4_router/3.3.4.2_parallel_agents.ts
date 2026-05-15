@@ -186,8 +186,9 @@ export const parallelRouter = graph.compile();
 
 
 // --- Example usage ---
-// const result = await parallelRouter.invoke({
-//   query: "What changed in the latest release and are there known migration issues?",
-//   answers: [],
-// });
-// console.log(result.finalAnswer);
+const result = await parallelRouter.invoke({
+  query: "What changed in the latest release and are there known migration issues?",
+  answers: [],
+});
+
+console.log(result.finalAnswer);

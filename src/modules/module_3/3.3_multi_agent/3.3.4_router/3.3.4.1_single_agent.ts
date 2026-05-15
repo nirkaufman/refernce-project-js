@@ -117,9 +117,19 @@ const graph = new StateGraph(RouterState)
 export const singleRouter = graph.compile();
 
 
-// --- Example usage ---
-const result = await singleRouter.invoke({
-  messages: [new HumanMessage("My invoice from last month looks wrong, I was charged twice.")],
-});
+// ---------------------------------------------------------------------------
+// Single-agent router — routes to exactly ONE specialist based on the query.
+// Input shape: MessagesAnnotation state ({ messages })
+// ---------------------------------------------------------------------------
 
-console.log(result.messages.at(-1)?.content);
+export async function runSingleRouter() {
+  console.log("=== Single Router ===");
+
+  const result = await singleRouter.invoke({
+    messages: [new HumanMessage("My invoice from last month looks wrong — I was charged twice.")],
+  });
+
+  console.log(result.messages.at(-1)?.content);
+}
+
+await runSingleRouter()
