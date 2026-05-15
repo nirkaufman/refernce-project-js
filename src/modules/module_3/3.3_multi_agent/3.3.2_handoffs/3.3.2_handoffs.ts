@@ -26,7 +26,7 @@
 
 import { createAgent, createMiddleware, initChatModel, tool } from "langchain";
 import { ToolMessage } from "@langchain/core/messages";
-import { Command, MessagesValue, StateSchema } from "@langchain/langgraph";
+import { Annotation, Command, MessagesAnnotation } from "@langchain/langgraph";
 import type { ToolRuntime } from "@langchain/core/tools";
 import z from "zod";
 
@@ -35,11 +35,20 @@ import z from "zod";
 // currentStep is the handoff signal read by middleware before every model call.
 // ---------------------------------------------------------------------------
 
-const SupportState = new StateSchema({
-  messages: MessagesValue,
-  currentStep: z.string().default("triage"),
-  warrantyStatus: z.enum(["in_warranty", "no_warranty"]).optional(),
-  issueType: z.enum(["software", "hardware"]).optional(),
+const SupportState = Annotation.Root({
+  ...MessagesAnnotation.spec,
+  currentStep: Annotation<string>({
+    default: () => "triage",
+    reducer: (_, next) => next,
+  }),
+  warrantyStatus: Annotation<"in_warranty" | "no_warranty" | undefined>({
+    default: () => undefined,
+    reducer: (_, next) => next,
+  }),
+  issueType: Annotation<"software" | "hardware" | undefined>({
+    default: () => undefined,
+    reducer: (_, next) => next,
+  }),
 });
 
 type SupportStateType = typeof SupportState.State;
