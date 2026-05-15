@@ -4,6 +4,7 @@
     "models": "./src/modules/module_1/1.1_models/1.1_models.ts:models",
     "prompt": "./src/modules/module_1/1.2_prompts/1.2.1_prompt.ts:prompt",
     "structure": "./src/modules/module_1/1.3_structure/1.3_structure.ts:structure",
+    "recipeSearchTools": "./src/modules/module_1/1.4_tools/simple-search.ts:recipeSearchTools",
     "simpleToolsAgent": "./src/modules/module_1/1.4_tools/tools.ts:simpleToolsAgent",
     "memory": "./src/modules/module_1/1.5_memory/1.5_memory.ts:memory",
     "describeImage": "./src/modules/module_1/1.6_multimodal/describe-image.ts:describeImage",
