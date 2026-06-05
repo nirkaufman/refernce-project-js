@@ -63,6 +63,24 @@ app.get("/assistants/search", (_req, res) => {
   ]);
 });
 
+// 1b. Get a single assistant by ID — useStream calls GET /assistants/:id on mount
+app.get("/assistants/:assistantId", (req, res) => {
+  const { assistantId } = req.params;
+  if (assistantId !== "agent") {
+    res.status(404).json({ detail: `No assistant found for "${assistantId}"` });
+    return;
+  }
+  res.json({
+    assistant_id: "agent",
+    graph_id: "agent",
+    name: "Chat Agent",
+    created_at: new Date().toISOString(),
+    updated_at: new Date().toISOString(),
+    metadata: {},
+    config: {},
+  });
+});
+
 // 2. Create a thread — returns a UUID; no persistence needed for this demo
 app.post("/threads", (_req, res) => {
   res.json({

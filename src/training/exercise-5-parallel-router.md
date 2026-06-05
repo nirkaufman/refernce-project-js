@@ -74,6 +74,7 @@ import { ChatOpenAI } from "@langchain/openai";
 import {
   StateGraph,
   Annotation,
+  Command,
   START,
   END,
   Send,
@@ -185,7 +186,7 @@ const classifier = model.withStructuredOutput(ClassificationSchema);
 Then implement the router:
 
 ```typescript
-async function router(state: typeof RouterState.State): Promise<Send[]> {
+async function router(state: typeof RouterState.State): Promise<Command> {
   const result = await classifier.invoke([
     {
       role: "system",
@@ -202,9 +203,10 @@ You may select one, two, or all three. Choose only what's genuinely needed.`,
   const validDomains = result.domains.filter((d) => d in AGENTS);
   const domainsToQuery = validDomains.length > 0 ? validDomains : Object.keys(AGENTS);
 
-  return domainsToQuery.map(
+  const sends = domainsToQuery.map(
     (domain) => new Send(`${domain}_agent`, { query: state.query, answers: [] })
   );
+  return new Command({ goto: sends });
 }
 ```
 

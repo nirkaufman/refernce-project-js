@@ -7,7 +7,7 @@
  * by a synthesizer node into one final answer.
  *
  * Compare to the single-agent router (3.3.4.1):
- *   Single  — routes to exactly ONE agent; use when domains are mutually exclusive
+ *   Single — routes to exactly ONE agent; use when domains are mutually exclusive
  *   Parallel — routes to ONE OR MORE agents; use when a query spans multiple domains
  *
  * When to use this variant:
@@ -22,14 +22,14 @@
  *         → synthesize node merges all answers into one final response
  *
  * This demo: a product knowledge base with three vertical agents:
- *   - docs_agent      : official documentation and how-tos
- *   - changelog_agent : recent releases and breaking changes
- *   - community_agent : community tips, workarounds, and FAQs
+ *   - docs_agent: official documentation and how-tos
+ *   - changelog_agent: recent releases and breaking changes
+ *   - community_agent: community tips, workarounds, and FAQs
  */
 
 import { createAgent, initChatModel } from "langchain";
 import { HumanMessage } from "@langchain/core/messages";
-import { Annotation, END, Send, START, StateGraph } from "@langchain/langgraph";
+import { Annotation, Command, END, Send, START, StateGraph } from "@langchain/langgraph";
 import z from "zod";
 
 const model = await initChatModel("gpt-4o");
@@ -102,7 +102,7 @@ const AGENTS: Record<string, typeof docsAgent> = {
 
 const classifier = model.withStructuredOutput(ClassificationSchema);
 
-async function router(state: typeof RouterState.State): Promise<Send[]> {
+async function router(state: typeof RouterState.State): Promise<Command> {
   const result = await classifier.invoke([
     {
       role: "system",
@@ -120,9 +120,8 @@ async function router(state: typeof RouterState.State): Promise<Send[]> {
   const validDomains = result.domains.filter((d) => d in AGENTS);
   const domainsToQuery = validDomains.length > 0 ? validDomains : Object.keys(AGENTS);
 
-  // Send dispatches each agent as an independent parallel branch.
-  // Each branch receives its own copy of the state slice it needs.
-  return domainsToQuery.map((domain) => new Send(`${domain}_agent`, { query: state.query, answers: [] }));
+  const sends = domainsToQuery.map((domain) => new Send(`${domain}_agent`, { query: state.query, answers: [] }));
+  return new Command({ goto: sends });
 }
 
 // ---------------------------------------------------------------------------
@@ -170,6 +169,7 @@ async function synthesize(state: typeof RouterState.State) {
 // All agent nodes share a common edge to "synthesize".
 // ---------------------------------------------------------------------------
 
+
 const graph = new StateGraph(RouterState)
   .addNode("router", router, { ends: ["docs_agent", "changelog_agent", "community_agent"] })
   .addNode("docs_agent", docsNode)
@@ -191,4 +191,5 @@ const result = await parallelRouter.invoke({
   answers: [],
 });
 
-console.log(result.finalAnswer);
+console.log(result);
+
