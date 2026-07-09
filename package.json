@@ -9,7 +9,7 @@
   "private": true,
   "type": "module",
   "scripts": {
-    "start": "langgraphjs dev",
+    "start": "npx langgraphjs dev",
     "build": "tsc",
     "clean": "rm -rf dist",
     "test": "node --experimental-vm-modules node_modules/jest/bin/jest.js --testPathPattern=\\.test\\.ts$ --testPathIgnorePatterns=\\.int\\.test\\.ts$",
